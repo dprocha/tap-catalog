@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-petclinic-api
+  description: Spring Petclinic API Rest
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-petclinic-api'
+  tags:
+    - java
+    - spring
+    - microservice
+  links:
+    - url: https://spring-petclinic-api.iterate.tap.azure.diegorocha.io
+      title: Acesso Aplicação Amabiente Dev (tap-iterate)
+      icon: web
+    - url: https://spring-petclinic-api.test.tap.azure.diegorocha.io
+      title: Acesso Aplicação Amabiente Homologação (tap-run-test)
+      icon: web
+    - url: https://spring-petclinic-api.prod.tap.azure.diegorocha.io
+      title: Acesso Aplicação Amabiente Produção (tap-run-prod)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: tanzu-brasil
+  system: spring-petclinic
+  dependsOn: ['resource:postgres-service', 'resource:spring-petclinic-lib']
+  apiConsumedBy: ['component:spring-petclinic-webapp']
+  providesApis:
+    - spring-petclinic-api
+  subcomponentOf: spring-petclinic-webapp

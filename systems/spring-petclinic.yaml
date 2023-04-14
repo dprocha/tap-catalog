@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: spring-petclinic
+  description: Pet Clinic Application
+spec:
+  owner: tanzu-brasil
+  domain: tanzu
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-petclinic
+  description: Pet Clinic Spring Boot
+  tags:
+    - microservice
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-petclinic'
+spec:
+  type: service
+  providesApis:
+    - spring-petclinic-api
+  lifecycle: alpha
+  owner: tanzu-brasil
+  system: spring-petclinic

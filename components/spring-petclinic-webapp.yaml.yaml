@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-webapp
+  description: Website Spring Petclinic
+  tags:
+    - Spring MVC
+  links:
+    - url: https://www.spring-petclinic.com.br
+      title: Website Spring Petclinic
+      icon: web
+spec:
+  type: website
+  lifecycle: production
+  owner: tanzu-brasil
+  system: spring-petclinic
+  consumesApis: ['component:spring-petclinic-api']

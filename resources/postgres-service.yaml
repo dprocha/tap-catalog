@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-service
+  description: Tanzu SQL Postgres Database
+spec:
+  type: database
+  owner: tanzu-brasil
+  system: spring-petclinic

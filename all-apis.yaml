@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: tanzu-apis
+  description: APIs do Tanzu
+spec:
+  targets:
+    - ./apis/spring-petclinic-api.yaml

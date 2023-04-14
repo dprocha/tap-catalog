@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: tanzu-components
+  description: Componentes de Software Tanzu
+spec:
+  targets:
+    - ./components/spring-petclinic-webapp.yaml
+    - ./components/spring-petclinic-api.yaml
+    - ./components/spring-petclinic-lib.yaml

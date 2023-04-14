@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: tanzu
+  description: Grupo VMware Tanzu
+spec:
+  type: team
+  profile:
+    displayName: Time VMware Tanzu
+    email: tanzu@vmware.com
+  children: [tanzu-brasil]

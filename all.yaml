@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: tanzu-catalog-info
+  description: Catálogo de Aplicações do Tanzu
+spec:
+  targets:
+    - ./all-users.yaml
+    - ./all-groups.yaml
+    - ./all-domains.yaml
+    - ./all-systems.yaml
+    - ./all-resources.yaml
+    - ./all-components.yaml
+    - ./all-apis.yaml

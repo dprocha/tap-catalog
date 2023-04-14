@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rabbitmq-service
+  description: Tanzu RabbitMQ Service
+spec:
+  type: messaging
+  owner: tanzu-brasil
+  system: spring-sensors
