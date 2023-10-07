@@ -6,4 +6,3 @@ metadata:
 spec:
   targets:
     - ./resources/postgres-service.yaml
-    - ./resources/rabbitmq-service.yaml

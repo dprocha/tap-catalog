@@ -5,4 +5,4 @@ metadata:
   description: APIs do Tanzu
 spec:
   targets:
-    - ./apis/spring-petclinic-api.yaml
+    #- ./apis/spring-petclinic-api.yaml

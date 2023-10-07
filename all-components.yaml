@@ -5,6 +5,4 @@ metadata:
   description: Componentes de Software Tanzu
 spec:
   targets:
-    - ./components/spring-petclinic-webapp.yaml
-    - ./components/spring-petclinic-api.yaml
-    - ./components/spring-petclinic-lib.yaml
+    - ./components/spring-petclinic.yaml

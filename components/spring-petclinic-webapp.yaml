@@ -1,17 +1,35 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: spring-webapp
-  description: Website Spring Petclinic
+  name: spring-petclinic-webapp
+  description: Spring Petclinic Web App
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-petclinic'
   tags:
-    - Spring MVC
+    - java
+    - spring
+    - spring-boot
+    - microservice
+    - webapp
   links:
-    - url: https://www.spring-petclinic.com.br
-      title: Website Spring Petclinic
+    - url: https://spring-petclinic.spring-petclinic.iterate.tap.azure.diegorocha.io
+      title: Acesso Aplicação Amabiente Dev na Azure
+      icon: web
+    - url: https://spring-petclinic.spring-petclinic.test.tap.azure.diegorocha.io
+      title: Acesso Aplicação Amabiente Homologação na Azure
+      icon: web
+    - url: https://spring-petclinic.spring-petclinic.prod.tap.azure.diegorocha.io
+      title: Acesso Aplicação Amabiente Produção na Azure
+      icon: web
+    - url: https://spring-petclinic.spring-petclinic.prod.tap.aws.diegorocha.io
+      title: Acesso Aplicação Amabiente Produção na AWS
+      icon: web
+    - url: https://spring-petclinic.spring-petclinic.prod.tap.gcp.diegorocha.io
+      title: Acesso Aplicação Amabiente Produção no GCP
       icon: web
 spec:
   type: website
   lifecycle: production
   owner: tanzu-brasil
   system: spring-petclinic
-  consumesApis: ['component:spring-petclinic-api']
+  dependsOn: ['resource:postgres-service']

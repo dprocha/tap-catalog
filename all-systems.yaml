@@ -6,4 +6,3 @@ metadata:
 spec:
   targets:
     - ./systems/spring-petclinic.yaml
-    - ./systems/spring-sensors.yaml
