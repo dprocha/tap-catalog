@@ -4,8 +4,8 @@ metadata:
   name: spring-petclinic
   description: Spring Petclinic Web Application
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-petclinic'
-    'backstage.io/source-location': 'url:https://github.com/dprocha/spring-petclinic.git'
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=spring-petclinic"
+    "backstage.io/source-location": "url:https://github.com/dprocha/spring-petclinic.git"
   tags:
     - java
     - spring
