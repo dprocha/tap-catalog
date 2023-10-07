@@ -3,6 +3,8 @@ kind: System
 metadata:
   name: spring-petclinic
   description: Spring PetClinic System
+  annotations:
+    'backstage.io/source-location': 'url:https://github.com/dprocha/spring-petclinic.git'
 spec:
   owner: tanzu-brasil
   domain: tanzu
